@@ -3,59 +3,42 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Flower Love</title>
+  <title>Flowers For You 💗</title>
 
-  <!-- CSS Animasi bunga kamu -->
+  <!-- CSS External -->
   <link rel="stylesheet" href="style.css">
-
-  <!-- CSS Tombol -->
-  <style>
-    #startScreen {
-      position: fixed;
-      inset: 0;
-      background: black;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      z-index: 9999;
-    }
-
-    #loveBtn {
-      padding: 20px 50px;
-      font-size: 26px;
-      border: none;
-      border-radius: 25px;
-      cursor: pointer;
-      background: pink;
-      color: black;
-      font-weight: bold;
-      box-shadow: 0 0 25px pink;
-      transition: 0.3s;
-    }
-
-    #loveBtn:hover {
-      transform: scale(1.1);
-    }
-  </style>
 </head>
 
 <body class="not-loaded">
 
+  <!-- =============================== -->
   <!-- Tombol Start -->
+  <!-- =============================== -->
   <div id="startScreen">
     <button id="loveBtn">I LOVE U 💗</button>
   </div>
 
+  <!-- =============================== -->
   <!-- Musik Catbox -->
+  <!-- =============================== -->
   <audio id="bgm" loop>
-    <source src="LINK_CATBOX_MUSIK_KAMU.mp3" type="audio/mpeg">
+    <source src="https://files.catbox.moe/rduk9t.mp3" type="audio/mpeg">
   </audio>
+<!-- Kotak Tulisan Berjalan -->
+<div class="text-box">
+  <div class="running-text">
+    💗Happy Valentine’s Day, my love. I just want you to know how grateful I am to have you in my life. You are not only my partner, but also my best friend, my comfort, and my greatest happiness. Every day with you feels special, because you always bring warmth, love, and meaning into my world. Thank you for your patience, your kindness, and for loving me the way you do. I promise to keep caring for you, supporting you, and loving you with all my heart. No matter what happens, I’m thankful that I get to share this journey with you. You will always be my Valentine, today and forever. I Love Youu💗
+  </div>
+</div>
 
   <!-- Background -->
   <div class="night"></div>
 
-  <!-- Animasi bunga kamu -->
+  <!-- =============================== -->
+  <!-- FULL FLOWERS ANIMATION -->
+  <!-- =============================== -->
   <div class="flowers">
+
     <!-- Flower 1 -->
     <div class="flower flower--1">
       <div class="flower__leafs flower__leafs--1">
@@ -94,6 +77,13 @@
         <div class="flower__leaf flower__leaf--4"></div>
         <div class="flower__white-circle"></div>
       </div>
+
+      <div class="flower__line">
+        <div class="flower__line__leaf flower__line__leaf--1"></div>
+        <div class="flower__line__leaf flower__line__leaf--2"></div>
+        <div class="flower__line__leaf flower__line__leaf--3"></div>
+        <div class="flower__line__leaf flower__line__leaf--4"></div>
+      </div>
     </div>
 
     <!-- Flower 3 -->
@@ -105,29 +95,61 @@
         <div class="flower__leaf flower__leaf--4"></div>
         <div class="flower__white-circle"></div>
       </div>
+
+      <div class="flower__line">
+        <div class="flower__line__leaf flower__line__leaf--1"></div>
+        <div class="flower__line__leaf flower__line__leaf--2"></div>
+        <div class="flower__line__leaf flower__line__leaf--3"></div>
+        <div class="flower__line__leaf flower__line__leaf--4"></div>
+      </div>
     </div>
+
+    <!-- =============================== -->
+    <!-- Rumput KIRI -->
+    <!-- =============================== -->
+    <div class="growing-grass">
+      <div class="flower__grass flower__grass--1">
+        <div class="flower__grass--top"></div>
+        <div class="flower__grass--bottom"></div>
+
+        <div class="flower__grass__leaf flower__grass__leaf--1"></div>
+        <div class="flower__grass__leaf flower__grass__leaf--2"></div>
+        <div class="flower__grass__leaf flower__grass__leaf--3"></div>
+        <div class="flower__grass__leaf flower__grass__leaf--4"></div>
+        <div class="flower__grass__leaf flower__grass__leaf--5"></div>
+        <div class="flower__grass__leaf flower__grass__leaf--6"></div>
+        <div class="flower__grass__leaf flower__grass__leaf--7"></div>
+        <div class="flower__grass__leaf flower__grass__leaf--8"></div>
+
+        <div class="flower__grass__overlay"></div>
+      </div>
+    </div>
+
+    <!-- =============================== -->
+    <!-- Rumput KANAN (Copy rumput kiri) -->
+    <!-- =============================== -->
+    <div class="growing-grass">
+      <div class="flower__grass flower__grass--1 grass-right">
+        <div class="flower__grass--top"></div>
+        <div class="flower__grass--bottom"></div>
+
+        <div class="flower__grass__leaf flower__grass__leaf--1"></div>
+        <div class="flower__grass__leaf flower__grass__leaf--2"></div>
+        <div class="flower__grass__leaf flower__grass__leaf--3"></div>
+        <div class="flower__grass__leaf flower__grass__leaf--4"></div>
+        <div class="flower__grass__leaf flower__grass__leaf--5"></div>
+        <div class="flower__grass__leaf flower__grass__leaf--6"></div>
+        <div class="flower__grass__leaf flower__grass__leaf--7"></div>
+        <div class="flower__grass__leaf flower__grass__leaf--8"></div>
+
+        <div class="flower__grass__overlay"></div>
+      </div>
+    </div>
+
   </div>
 
-  <!-- JS Animasi bunga kamu -->
+  <!-- JS External -->
   <script src="app.js"></script>
-
-  <!-- Script Tombol + Musik -->
-  <script>
-    const btn = document.getElementById("loveBtn");
-    const screen = document.getElementById("startScreen");
-    const audio = document.getElementById("bgm");
-
-    btn.addEventListener("click", () => {
-      // Hilangkan tombol
-      screen.style.display = "none";
-
-      // Jalankan animasi bunga
-      document.body.classList.remove("not-loaded");
-
-      // Play musik
-      audio.play();
-    });
-  </script>
 
 </body>
 </html>

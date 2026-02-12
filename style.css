@@ -1010,3 +1010,46 @@ body {
 #loveBtn:hover {
   transform: scale(1.1);
 }
+.flower__leaf {
+  background-color: #c70039 !important;
+  background-image: linear-gradient(to top, #7a001f, #ff4d6d) !important;
+}
+/* =============================== */
+/* KOTAK PUTIH DI ATAS */
+/* =============================== */
+.text-box {
+  position: fixed;
+  top: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 350px;
+  padding: 12px 15px;
+
+  background: white;
+  border-radius: 15px;
+
+  overflow: hidden; /* tulisan tidak keluar kotak */
+  z-index: 9998;
+}
+
+/* =============================== */
+/* TEKS BERJALAN TERUS */
+/* =============================== */
+.running-text {
+  display: inline-block;
+  white-space: nowrap;
+  padding-left: 100%;
+  animation: scrollText 50s linear infinite;
+}
+
+
+/* Animasi berjalan */
+@keyframes scrollText {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
