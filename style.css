@@ -984,3 +984,29 @@ body {
 .not-loaded * {
   animation-play-state: paused !important;
 }
+#startScreen {
+  position: fixed;
+  inset: 0;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+#loveBtn {
+  padding: 20px 40px;
+  font-size: 24px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  background: pink;
+  color: black;
+  font-weight: bold;
+  box-shadow: 0 0 20px pink;
+  transition: 0.3s;
+}
+
+#loveBtn:hover {
+  transform: scale(1.1);
+}
